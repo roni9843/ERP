@@ -1,0 +1,29 @@
+name: Feature request
+description: Propose a new capability or a change to an existing module
+labels: [enhancement]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: See docs/domain/module-catalog.md (for example sales, inventory, rental)
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / user story
+      placeholder: As a <role>, I want <capability> so that <benefit>.
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: Business rules and calculations
+      description: Formulas, accounting entries, stock effects, ZATCA implications, edge cases.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] …

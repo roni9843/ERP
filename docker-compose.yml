@@ -1,0 +1,55 @@
+# Local development infrastructure. Start: `docker compose up -d`, stop: `docker compose down`.
+# Data persists in named volumes; `docker compose down -v` wipes it.
+name: erp-platform
+
+services:
+  mongo:
+    image: mongo:8
+    # Single-node replica set: required for multi-document transactions.
+    command: ['--replSet', 'rs0', '--bind_ip_all', '--port', '27017']
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      # Initiates the replica set on first start, then reports healthy once it is PRIMARY.
+      test: >
+        mongosh --quiet --eval "try { rs.status().ok } catch (e) {
+        rs.initiate({ _id: 'rs0', members: [{ _id: 0, host: 'localhost:27017' }] }).ok }"
+      interval: 5s
+      timeout: 10s
+      retries: 30
+      start_period: 10s
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis-data:/data
+
+  mailpit:
+    image: axllent/mailpit
+    ports:
+      - '1025:1025' # SMTP
+      - '8025:8025' # Web UI
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+
+  minio:
+    image: minio/minio
+    command: ['server', '/data', '--console-address', ':9001']
+    ports:
+      - '9000:9000' # S3 API
+      - '9001:9001' # Console
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio-data:/data
+
+volumes:
+  mongo-data:
+  redis-data:
+  minio-data:

@@ -1,0 +1,6 @@
+# Replace the placeholders with GitHub usernames once the repository is created.
+# Each line: <path pattern> <owners>. The last matching pattern wins.
+# *                    <owner-username> <collaborator-username>
+# /apps/api/           <backend-owner>
+# /apps/web/           <frontend-owner>
+# /packages/shared/    <owner-username> <collaborator-username>

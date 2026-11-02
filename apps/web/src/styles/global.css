@@ -1,0 +1,19 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, 'Noto Sans Arabic', 'Helvetica Neue',
+    Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Numbers (amounts, codes, VAT numbers) always read left-to-right, even in RTL layouts. */
+.ltr-number {
+  direction: ltr;
+  unicode-bidi: embed;
+}

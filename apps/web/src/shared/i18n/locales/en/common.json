@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "ERP Platform",
+    "tagline": "Sales, inventory and accounting for Saudi businesses"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "crm": "Clients & CRM",
+    "clients": "Clients",
+    "sales": "Sales",
+    "inventory": "Inventory",
+    "purchasing": "Purchasing",
+    "accounting": "Accounting",
+    "rental": "Rentals",
+    "hr": "HR & Payroll",
+    "comingSoon": "Soon"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "logout": "Log out",
+    "backHome": "Back to dashboard",
+    "confirmDelete": "Delete this record? This cannot be undone."
+  },
+  "auth": {
+    "loginTitle": "Log in to your account",
+    "signupTitle": "Create your company account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Your name",
+    "companyName": "Company name",
+    "login": "Log in",
+    "signup": "Create account",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?"
+  },
+  "dashboard": {
+    "welcome": "Welcome, {{name}}",
+    "company": "Company: {{company}}",
+    "placeholder": "Dashboards for sales, cash and stock will appear here as modules are built."
+  },
+  "clients": {
+    "title": "Clients",
+    "new": "New client",
+    "editTitle": "Edit client",
+    "searchPlaceholder": "Search by name, code, email, phone or VAT number",
+    "created": "Client created",
+    "updated": "Client updated",
+    "deleted": "Client deleted",
+    "fields": {
+      "code": "Code",
+      "type": "Type",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "vatNumber": "VAT number",
+      "crNumber": "CR number",
+      "creditLimit": "Credit limit",
+      "city": "City",
+      "postalCode": "Postal code",
+      "notes": "Notes",
+      "status": "Status"
+    },
+    "types": { "individual": "Individual", "business": "Business" },
+    "statuses": { "active": "Active", "suspended": "Suspended" }
+  },
+  "language": { "ar": "العربية", "en": "English" },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "notFound": "The page you are looking for does not exist."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@erp/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "Shared TypeScript compiler presets for every workspace.",
+  "files": [
+    "*.json"
+  ]
+}

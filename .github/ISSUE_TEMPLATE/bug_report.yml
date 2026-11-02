@@ -1,0 +1,39 @@
+name: Bug report
+description: Something is broken or behaves incorrectly
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the request id (x-request-id) from the error if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Click …
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [api, web, shared, infra, docs]
+    validations:
+      required: true
+  - type: dropdown
+    id: locale
+    attributes:
+      label: UI language
+      options: ['Arabic (RTL)', 'English (LTR)', 'Both / not UI']

@@ -1,0 +1,4 @@
+{
+  "extends": "@erp/typescript-config/node.json",
+  "include": ["vite.config.ts", "playwright.config.ts", "e2e"]
+}
