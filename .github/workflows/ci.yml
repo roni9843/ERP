@@ -25,7 +25,7 @@ jobs:
           cache: pnpm
 
       # mongodb-memory-server downloads a MongoDB binary on first use; cache it between runs.
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: ~/.cache/mongodb-binaries
           key: mongodb-binaries-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
