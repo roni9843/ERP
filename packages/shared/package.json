@@ -25,8 +25,8 @@
     "@erp/eslint-config": "workspace:*",
     "@erp/typescript-config": "workspace:*",
     "@types/node": "^24.19.2",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "typescript": "~6.0.3",
-    "vitest": "^5.0.5"
+    "vitest": "^5.1.1"
   }
 }
